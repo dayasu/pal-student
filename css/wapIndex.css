@@ -1,0 +1,67 @@
+*{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+body{minheight:101%}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+ol,li{list-style:none}input,button,select,textarea{outline:0}a:link,a:hover{text-decoration:none}
+a:visited,a:active{text-decoration:none}
+.fl{float:left}
+.fr{float:right;display:inline}
+.clearfix:before,.clearfix:after{content:"";display:table}
+.clearfix:after{clear:both;overflow:hidden}
+button{border:0}a,button,input,textarea{-webkit-tap-highlight-color:rgba(0,0,0,0;) -webkit-user-modify:read-write-plaintext-only}
+.css{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+html{height:100%}body{width:100%}html{font-size:10px}@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:12px}}@media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+.contanier{width:100%}
+.header{height:60px;background-color:#f0f0f0}
+.logo,.address,.search-box,.to-register{float:left;height:100%;display:block}
+.logo{width:16%;background:url(../images/wap_logo.png) no-repeat;background-size:85% auto;background-position:center center}
+.address{width:10%;text-align:center;position:relative}
+.address ul{position:absolute;z-index:999;width:100%;background:#fff;border:1px solid #e0e0e0;margin:3px;display:none}
+.address ul li{border-bottom:1px solid #e0e0e0;margin-bottom:5px;line-height:3rem}.search-box{width:64%}
+.to-register{width:10%;height:100%;line-height:60px;color:#36a48c;font-size:1.2rem;font-weight:bold}
+.now-address{display:inline-block;font-size:1.3rem;margin-top:16px;font-weight:bold}
+.change-address{font-weight:bold;font-size:1.8rem;color:#36a48c;position:relative;top:-4px}
+.search-content{width:93%;height:31px;margin:0 auto;border:1px solid #36a48c;margin-top:15px;border-radius:4px}
+.search-pic{display:inline-block;vertical-align:middle;position:relative;top:-2px;height:30px;width:30px;background:url(../images/search_font.png) no-repeat;background-size:75%;background-position:center center}.search-font{color:#979797;font-size:1.2rem;display:inline-block;height:100%;line-height:31px}
+.banner{width:100%;height:150px}
+.index_show{position:relative;overflow:hidden;width:100%;height:100%}
+.index_show div{position:absolute}
+#index_show_img1{background:url(../images/banner1.jpg) no-repeat;background-size:auto 100%;background-position:center;height:100%;width:100%}
+#index_show_img2{background:url(../images/banner2.jpg) no-repeat;background-size:auto 100%;background-position:center;height:100%;width:100%}
+#index_show_img3{background:url(../images/banner3.jpg) no-repeat;background-size:auto 100%;background-position:center;height:100%;width:100%}
+#index_show_img4{background:url(../images/banner4.png);background-size:auto 100%;background-position:center;height:100%;width:100%}
+#index_show_button_left,#index_show_button_right{display:none}.class-count{width:100%;height:auto;padding-top:10px}
+.class-count .box{display:inline-block;width:49%;text-align:center;padding-bottom:6px;padding-left:7%;position:relative}
+.class-count .box.ou{padding-left:0;padding-right:7%}.class-count .box img{width:78%}
+.class-count .box .tip{position:absolute;display:inline-block;font-size:1em;width:3em;top:38%;left:62%}
+.class-count .box.ou .tip{left:48%}
+.class-count .box .contd{position:absolute;display:inline-block;font-size:1em;width:3em;top:62%;left:62%}
+.class-count .box.ou .contd{left:48%}.class-count .box.first{color:#D68B78}
+.class-count .box.second{color:#4BA18E}
+.class-count .box.third{color:#DFC779}
+.class-count .box.four{color:#CC472E}
+.download{width:100%}
+.top{width:100%;background:#f0f0f0;height:39px}
+.top div{float:left;height:100%}
+.top .b{width:33%;background-color:#36a48c;height:2px;margin-top:19px;border-bottom:1px solid #fff}
+.top .left-l{width:9%;background:url(../images/download_logo.png) no-repeat;background-size:auto 70%;background-position:center}
+.top .right-l{width:9%;background:url(../images/download_logo.png) no-repeat;
+	background-size:auto 70%;background-position:center;transform:rotate(90deg);-ms-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);-moz-transform:rotate(90deg)}
+	.top .center{width:16%;font-size:1.2rem;color:#36a48c;height:100%;line-height:39px;text-align:center}
+	.download .content{width:100%;background:#36a48c;display:block;position:relative}
+	.download .content .user-tip{font-size:1.5rem;display:inline-block;width:10%;color:#fff;vertical-align:text-top;padding:10px}
+	.download .content .btn{vertical-align:text-top;display:inline-block;width:39%;text-align:center;background:#fff;
+		color:#36a48c;font-size:2rem;position:absolute;top:50%;margin-top:-22px;height:45px;line-height:45px;border-radius:7px;
+		padding-left:7%}.download .content .btn img{top:25%;height:50%;position:absolute;left:15%}
+		.download .content .btn.android{right:3%}
+		.download .teacher-download{position:absolute;top:-1.25rem;right:5px;font-size:1.1rem;color:#36a48c}
+		.server .content img{border-top:2px solid #36a48c;width:100%;height:auto}
+		.question .content{width:100%;border-top:2px solid #36a48c;height:auto;padding:12px;position:relative;padding-top:1.5rem}
+	.question .content ul{display:inline-block;vertical-align:text-top;width:49%;padding:5px}.f-ul{border-right:1px solid #36a48c}
+	.question .content ul li{margin-bottom:5px;margin-bottom:11px}.question .content ul li a{font-size:1.1rem;line-height:1.6rem;color:#606060}
+	.question .content .more-question{font-size:1rem;line-height:1.6rem;color:#36a48c;position:absolute;right:10px;top:2px}
+	.unique .content{width:100%;border-top:2px solid #36a48c;height:auto;position:relative}.unique .content img{width:100%;height:auto}
+	.footer{width:100%;background:#f0f0f0;padding-top:27px}.change-box{margin:0 auto;width:99%;border:1px solid #e0e0e0;padding-top:10px;padding-bottom:10px}
+	.change-box .change-pic{text-align:center;display:inline-block;width:32%}.change-box .change-pic img{width:30%}
+	.footer-info{width:100%;text-align:center;font-size:1.2rem;color:#88898c;padding-top:1.2rem;padding-bottom:1.2rem}

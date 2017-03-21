@@ -1,0 +1,884 @@
+* {
+    font-family: "Microsoft YaHei", s"SimHei", "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+
+body {
+    minheight: 101% position: relative;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0
+}
+
+ol,
+li {
+    list-style: none
+}
+
+input,
+button,
+select,
+textarea {
+    outline: 0
+}
+
+a:link,
+a:hover {
+    text-decoration: none
+}
+
+a:visited,
+a:active {
+    text-decoration: none
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right;
+    display: inline
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table
+}
+
+.clearfix:after {
+    clear: both;
+    overflow: hidden
+}
+
+button {
+    border: 0
+}
+
+html {
+    height: 100%
+}
+
+body {
+    height: 100%;
+    width: 100%
+}
+
+.container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.wrap {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #2fbb5c;
+    background: url(../images/login_bg.png) repeat
+}
+
+.register-box {
+    margin: 0 auto;
+    width: 620px;
+    background-color: #c1ebce;
+    left: 50%;
+    margin-left: -310px;
+    position: absolute;
+    top: 50%;
+    background: url(../images/register_box_bg.png) repeat
+}
+
+.select {
+    height: 250px;
+    margin-top: -125px
+}
+
+.select a:first-child {
+    padding-left: 50px
+}
+
+.select a:last-child {
+    padding-right: 50px
+}
+
+.select a {
+    float: left;
+    width: 50%;
+    text-align: center
+}
+
+.select a .pic {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 100px;
+    margin-top: 30px;
+    padding: 10px
+}
+
+.select a .pic.s {
+    background: url(../images/register_head2.png) no-repeat
+}
+
+.select a .pic.t {
+    background: url(../images/register_head1.png) no-repeat
+}
+
+.select a .teacher,
+.select a .student {
+    width: 145px;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 42px;
+    line-height: 42px;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 40px
+}
+
+.select a .student {
+    background-color: #3ea9dc
+}
+
+.select a .teacher {
+    background-color: #f19149
+}
+
+.first {
+    height: 450px;
+    margin-top: -220px
+}
+
+.content {
+    width: 100%;
+    height: 100%
+}
+
+.content .input-group {
+    margin-top: 20px;
+    position: relative
+}
+
+.content .input-group:first-child {
+    padding-top: 37px
+}
+
+.content .input-group input {
+    width: 350px;
+    height: 45px;
+    border: 0;
+    margin-left: 135px;
+    font-size: 20px;
+    padding-left: 15px;
+    border: 2px solid #fff
+}
+
+.content .input-group input:hover {
+    border: 2px solid #36a48c
+}
+
+.content .input-group input.yzm {
+    width: 260px
+}
+
+.content .input-group .get_yzm {
+    width: 90px;
+    background-color: #efefef;
+    padding: 0;
+    height: 45px;
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    line-height: 45px;
+    border-left: 1px solid rgba(0, 0, 0, .2);
+    text-align: center;
+    font-size: 15px;
+    color: #36a48c;
+    cursor: pointer;
+    right: 135px
+}
+
+.content .input-group .get_yzm.active:hover {
+    background-color: #36a48c;
+    color: #fff
+}
+
+.content .input-group input#submit {
+    border: 0;
+    cursor: pointer;
+    width: 172px;
+    padding-left: 0;
+    background-color: #36a48c;
+    color: #fff
+}
+
+.content .input-group input#submit:hover {
+    background-color: #2C9B82;
+    color: #fff
+}
+
+.error_tip {
+    font-size: 14px;
+    color: red;
+    display: none
+}
+
+.content .input-group input.error {
+    background-color: #efefef
+}
+
+.error_tip.yzm {
+    position: absolute;
+    right: 35px;
+    top: 10px
+}
+
+.register-box.second.user {
+    height: 300px
+}
+
+.content .input-group.sex input {
+    display: inline-block;
+    width: 20px
+}
+
+.second {
+    height: 400px;
+    margin-top: -200px
+}
+
+.password_check {
+    margin-top: 10px
+}
+
+.input-group.sex {
+    margin-left: 135px
+}
+
+.input-group.sex div {
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    background-color: #fff;
+    width: 172px;
+    margin-right: 1px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    font-size: 18px
+}
+
+.input-group.sex div:hover {
+    background-color: #2C9B82;
+    color: #fff
+}
+
+.input-group.sex div.active {
+    background-color: #2C9B82;
+    color: #fff
+}
+
+.input-group.sex div .pic_woman,
+.input-group.sex div .pic_man {
+    position: absolute;
+    height: 37px;
+    width: 35px;
+    background-color: #000;
+    left: 20px;
+    top: 4px
+}
+
+.input-group.sex div .pic_man {
+    background: url(../images/register_ooxx.png) no-repeat scroll 2px -2px
+}
+
+.input-group.sex div:hover .pic_man,
+.input-group.sex div.active .pic_man {
+    background: url(../images/register_ooxx.png) no-repeat scroll -34px -2px
+}
+
+.input-group.sex div .pic_woman {
+    background: url(../images/register_ooxx.png) no-repeat scroll -67px 0
+}
+
+.input-group.sex div:hover .pic_woman,
+.input-group.sex div.active .pic_woman {
+    background: url(../images/register_ooxx.png) no-repeat scroll -97px 0
+}
+
+.third {
+    height: 390px;
+    margin-top: -175px
+}
+
+.content .input-group:first-child {
+    padding: 0
+}
+
+.content .input-group .xyds {
+    display: inline-block;
+    width: 100%;
+    padding-left: 140px;
+    font-size: 25px;
+    height: 150px;
+    padding-right: 135px;
+    background: url(../images/register_xyds.png) no-repeat scroll 190px 0
+}
+
+.content .input-group input#jump {
+    border: 0;
+    cursor: pointer;
+    width: 172px;
+    padding-left: 0;
+    background-color: #f19149;
+    color: #fff;
+    margin-left: 0
+}
+
+.content .input-group input#jump:hover {
+    background-color: #E47C2E;
+    color: #fff
+}
+
+.fourth {
+    height: 620px;
+    margin-top: -240px
+}
+
+.content .input-group .tag {
+    display: inline-block;
+    width: 100%;
+    padding-left: 135px;
+    font-size: 25px;
+    height: 45px;
+    color: #2C9B82
+}
+
+.fourth .input-group.f {
+    height: 55px;
+    padding-top: 20px
+}
+
+.describe {
+    height: 55px;
+    width: 350px;
+    margin-left: 135px;
+    overflow: auto;
+}
+
+.fourth .input-group {
+    height: 45px;
+    line-height: 45px
+}
+
+.fourth .input-group.p {
+    padding-left: 135px
+}
+
+#price {
+    width: 150px;
+}
+
+#order_num {
+    width: 150px;
+    margin-left: -14px;
+}
+
+.price_tip,
+.order_num_tip {
+    position: relative;
+    left: -64px;
+}
+
+.order_num_tip {
+    margin-left: 14px;
+}
+
+.fourth .input-group.p .goodat_box,
+.fourth .input-group.p .goodat_box_t,
+.fourth .input-group.p .city_box,
+.fourth .input-group.p .school_box {
+    background-color: #fff;
+    width: 350px;
+    font-size: 16px;
+    padding-left: 15px;
+    border: 2px solid #fff;
+    position: relative
+}
+
+.fourth .input-group.p .goodat_box,
+.fourth .input-group.p .goodat_box_t {
+    width: 172px;
+    display: inline-block;
+    position: relative
+}
+
+.error_tip.goodat {
+    position: relative;
+    left: 7px
+}
+
+.fourth .input-group.p .goodat_box_t {
+    background: white;
+    margin-left: 1px
+}
+
+.fourth .input-group.p .city_box:hover,
+.fourth .input-group.p .goodat_box_t:hover,
+.fourth .input-group.p .school_box:hover,
+.fourth .input-group.p .goodat_box:hover {
+    border: 2px solid #36a48c;
+    cursor: pointer
+}
+
+.fourth .input-group.p .city_box:active,
+.fourth .input-group.p .school_box:active,
+.fourth .input-group.p .goodat_box:active {
+    border: 2px solid #36a48c;
+    background: #36a48c;
+    color: #fff;
+    cursor: pointer
+}
+
+.fourth .input-group input {
+    font-size: 16px
+}
+
+.fourth .input-group input:focus {
+    border: 2px solid #36a48c
+}
+
+.fourth .input-group.p .tip {
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+
+.fourth .input-group .goodat_box ul,
+.fourth .input-group .goodat_box_t ul {
+    width: 172px
+}
+
+.fourth .input-group ul {
+    position: absolute;
+    z-index: 999;
+    background-color: #fff;
+    display: block;
+    left: -3px;
+    top: 44px;
+    background-color: #F0F0F0;
+    border: 1px solid #BFBABA;
+    width: 351px;
+    display: none;
+    padding-bottom: 5px;
+    max-height: 300px;
+    overflow: scroll;
+    overflow-x: hidden
+}
+
+.fourth .input-group ul li {
+    border-bottom: 1px dotted #36a48c;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 22px;
+    padding-right: 15px
+}
+
+.fourth .input-group ul li:hover {
+    background: #36a48c;
+    color: #fff
+}
+
+.fourth .input-group .tip.p {
+    position: relative;
+    left: -60px;
+    color: #777;
+    font-weight: bold
+}
+
+.fourth .error_tip.p {
+    display: inline-block;
+    position: relative;
+    top: -48px;
+    left: 360px;
+    display: none
+}
+
+.fourth .error_tip.p.s {
+    left: 7px;
+    top: 0
+}
+
+.fourth .error_tip.p.y {
+    position: absolute;
+    left: 496px
+}
+
+.four .md-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 620px;
+    max-width: 620px;
+    min-width: 300px;
+    min-height: 300px;
+    height: auto;
+    z-index: 2000;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%)
+}
+
+.four .md-show {
+    visibility: visible
+}
+
+.four .md-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    background: rgba(143, 27, 15, 0.8);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s
+}
+
+.four .md-show~.md-overlay {
+    opacity: 1;
+    visibility: visible
+}
+
+.four .md-content {
+    height: 300px;
+    color: #fff;
+    background-color: #2EC494;
+    position: relative;
+    border-radius: 3px;
+    margin: 0 auto
+}
+
+.four .md-content h3 {
+    margin: 0;
+    padding: .4em;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+    opacity: .8;
+    background: #36a48c;
+    border-radius: 3px 3px 0 0
+}
+
+.four .md-content button {
+    display: block;
+    margin: 0 auto;
+    font-size: .8em
+}
+
+.four .md-effect-1 .md-content {
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s
+}
+
+.four .md-show.md-effect-1 .md-content {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+}
+
+.four .md-modal .md-content .tip {
+    float: right;
+    margin-top: 8px;
+    margin-right: 10px
+}
+
+.four .md-modal .md-content .city_school_box,
+.four .md-modal .md-content .school_select_box {
+    float: left;
+    margin-top: 40px;
+    position: relative
+}
+
+.four .md-modal .md-content .city_school_box {
+    width: 130px;
+    margin-left: 88px
+}
+
+.four .md-modal .md-content .school_select_box {
+    width: 268px;
+    margin-left: 50px
+}
+
+.four .md-modal .md-content .city_school_box .down,
+.four .md-modal .md-content .school_select_box .down {
+    height: 45px;
+    line-height: 45px;
+    background-color: #fff;
+    color: #777;
+    font-size: 18px;
+    padding-left: 15px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #fff
+}
+
+.four .md-modal .md-content .city_school_box .down:hover,
+.four .md-modal .md-content .school_select_box .down:hover {
+    border: 2px solid #36a48c
+}
+
+.four .md-modal .md-content .city_school_box .down:active,
+.four .md-modal .md-content .school_select_box .down:active {
+    border: 2px solid #36a48c;
+    background-color: #36a48c;
+    color: #fff
+}
+
+.four .md-modal .md-content ul {
+    width: 100%;
+    border-top: 2px solid #C9D0C7;
+    background-color: #fff;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 47px
+}
+
+.four .md-modal .md-content ul li {
+    padding-left: 20px;
+    color: #000;
+    line-height: 40px
+}
+
+.four .md-modal .md-content ul li:hover {
+    background-color: #36a48c;
+    color: #fff;
+    cursor: pointer
+}
+
+.zhezhao {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-color: #000;
+    width: 100%;
+    z-index: 99;
+    opacity: .5;
+    display: none;
+    filter: alpha(opacity=50);
+    -moz-opacity: .5
+}
+
+.fifth {
+    height: 325px;
+    margin-top: -162px
+}
+
+.fifth .input-group {
+    display: inline-block
+}
+
+.fifth .input-group.t {
+    width: 145px;
+    height: 190px;
+    padding-top: 0;
+    margin-top: 37px
+}
+
+.fifth .input-group.t.l {
+    margin-left: 120px
+}
+
+.fifth .input-group.t.r {
+    margin-left: 90px
+}
+
+.fifth .input-group.t img {
+    background-color: #fff;
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    outline: 0;
+    border: 0
+}
+
+.fifth .input-group.t button {
+    margin-top: 32px;
+    display: block;
+    width: 145px;
+    height: 45px;
+    border: 1px solid #36a48c;
+    background: 0;
+    font-size: 15px;
+    cursor: pointer
+}
+
+.fifth .input-group.t button:hover {
+    border: 1px solid #118F73;
+    color: #36a48c
+}
+
+.fifth .input-group.btn {
+    display: block;
+    width: 230px;
+    height: 45px;
+    background-color: #36a48c;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 45px;
+    font-size: 17px;
+    cursor: pointer
+}
+
+.fifth .input-group.btn:hover {
+    background-color: #118F73
+}
+
+input {
+    line-height: 41px
+}
+
+.had_tip {
+    padding-left: 20px
+}
+
+.had_tip a {
+    color: #137560
+}
+
+.logo_box {
+    width: 1000px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -500px
+}
+
+.logo_box a {
+    display: block;
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../images/white_logo.png) no-repeat;
+    z-index: 999
+}
+
+.pic_2 {
+    background: url(../images/login_pic_2.png) no-repeat;
+    height: 71px;
+    width: 147px;
+    position: absolute;
+    right: 0;
+    top: -77px
+}
+
+.input-group.checkbox {
+    height: 20px;
+}
+
+.input-group.checkbox input {
+    height: 17px;
+    width: 18px;
+}
+
+.input-group.checkbox a {
+    font-size: 15px;
+    position: relative;
+    top: -3px;
+    color: #000;
+}
+
+.address {
+    display: inline-block;
+    width: 100px;
+    line-height: 21px;
+    vertical-align: top;
+}
+
+#up_notice {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 50%;
+    width: 300px;
+    height: 150px;
+    color: black;
+    z-index: 1;
+    background-color: white;
+    text-align: center;
+    margin-left: -150px;
+    margin-top: -75px;
+    box-shadow: 0px 0px 40px black;
+}
+
+#up_notice i {
+    font-size: 81px;
+    color: #36a48c;
+    margin-top: 20px;
+    margin-bottom: 14px;
+}
+
+#up_notice span {
+    color: #36a48c;
+}

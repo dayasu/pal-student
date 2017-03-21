@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<link rel="shortcut icon" href="__PUBLIC__/images/logo.ico" type="image/x-icon" />
+	<meta http-equiv="content-type" content="text/html;charset=utf8"/>
+	<title>家长注册</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/register.css"/>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.md5.js"></script>
+<!--[if lte IE 8]>
+<noscript>
+	<style>.html5-wrappers{display:none!important;}</style>
+	<div class="ie-noscript-warning">
+		您的浏览器禁用了脚本，请
+		<a href="">查看这里</a>
+		来启用脚本!或者
+		<a href="/?noscript=1">继续访问</a>
+		.
+	</div>
+</noscript>
+<![endif]-->
+<!--[if lt IE 9]>
+<script>
+		(function() {
+		if (!
+		/*@cc_on!@*/
+		0) return;
+		var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+		var i= e.length;
+		while (i--){
+		document.createElement(e[i])
+		}
+		})()
+		</script>
+<![endif]-->
+<script type="text/javascript">
+	var registerurl = "<{:U('userRegister2')}>";</script>
+</head>
+<body>
+<div class="container">
+	<div class="logo_box">
+		<a href="<{:U('Index/index')}>"></a>
+	</div>
+	<div class="wrap">
+		<div class="register-box second user">
+			<div class="pic_2"></div>
+			<div class="content">
+				<div class="input-group">
+					<input placeholder="密码" type="password" name="password" id="password" />
+					<span class="error_tip password"><i class="icon-remove-sign"></i>两次密码不一致</span>
+				</div>
+				<div class="input-group">
+					<input placeholder="确认密码" type="password" name="password_check" id="password_check" />
+					<span class="error_tip password_check"><i class="icon-remove-sign"></i>两次密码不一致</span>
+				</div>
+				<div class="input-group">
+					<input type="button" value="去选择课程吧" id="submit" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(function() {
+		var role_type = 2;
+		var password;
+		var password_check;
+		// 验证密码
+		$("#password").blur(function() {
+			psw();
+		});
+		// 验证密码
+		$("#password_check").blur(function() {
+			checkpws();
+		});
+		// 提交注册
+		$("#submit").click(function() {
+			if($("#password").val().length<8){
+				$('.error_tip.password').show();
+				$('.error_tip.password').html("<i class='icon-remove-sign'>8位密码</i>");
+				$('.error_tip.password').css("color" , "red");
+				$('#password').addClass('error');
+				return false;
+			}
+			$.post(
+				registerurl ,
+				{ role_type: 2, user_password: $.md5($("#password").val()) ,password_check: $.md5($("#password_check").val())},
+				function(data) {
+					if(data.status == 0) {
+						window.location.href = "<{:U('Search/index')}>";
+					} else if(data.status == 1) {
+						$('.error_tip.name').show();
+						$('.error_tip.name').html("<i class='icon-remove-sign'>信息不完全</i>");
+						$('.error_tip.name').css("color" , "red");
+						$('#name').addClass('error');
+						return false;
+					} else if(data.status == 4) {
+						$('.error_tip.password').show();
+						$('.error_tip.password').html("<i class='icon-remove-sign'>密码长度不足八位</i>");
+						$('.error_tip.password').css("color" , "red");
+						$('#password').addClass('error');
+						return false;
+					}
+					else if(data.status == 5) {
+						$('.error_tip.password').show();
+						$('.error_tip.password').html("<i class='icon-remove-sign'>两次密码不一致</i>");
+						$('.error_tip.password').css("color" , "red");
+						$('#password').addClass('error');
+						return false;
+					}
+				},
+				"json"
+			);
+		});
+		//按enter确定
+		$(document).keypress(function(e) {
+			if (e.which == 13) {
+				$("#submit").click();
+			}
+		});
+	});
+</script>
+<script type="text/javascript">
+	function psw(){
+		if($("#password").val()==''){
+			$('.error_tip.password').show();
+			$('.error_tip.password').html("<i class='icon-remove-sign'>请输入密码</i>");
+			$('.error_tip.password').css("color" , "red");
+			$('#password').addClass('error');
+			return false;
+		}else if($("#password").val().length<8){
+			$('.error_tip.password').show();
+			$('.error_tip.password').html("<i class='icon-remove-sign'>8位密码</i>");
+			$('.error_tip.password').css("color" , "red");
+			$('#password').addClass('error');
+			return false;
+		}else if($("#password").val()!=$("#password_check").val() && $("#password_check").val()!=''){
+			$('.error_tip.password').show();
+			$('.error_tip.password').html("<i class='icon-remove-sign'>两次密码不一致</i>");
+			$('.error_tip.password').css("color" , "red");
+			$('#password').addClass('error');
+			return false;
+		}else{
+			$('.error_tip.password').show();
+			$('.error_tip.password').html("<i class='icon-ok'></i>");
+			$('.error_tip.password').css("color" , "green");
+			$('#password').removeClass('error');
+			return true;
+		}
+	}
+	function checkpws(){
+		if($("#password").val() != $("#password_check").val()){
+			$('.error_tip.password_check').show();
+			$('.error_tip.password_check').html("<i class='icon-remove-sign'>两次密码不一致</i>");
+			$('.error_tip.password_check').css("color" , "red");
+			$('#password_check').addClass('error');
+			return false;
+		}else if($("#password").val() == $("#password_check").val() && $("#password").val().length >= 8){
+			$('.error_tip.password').show();
+			$('.error_tip.password').html("<i class='icon-ok'></i>");
+			$('.error_tip.password').css("color" , "green");
+			$('#password').removeClass('error');
+			$('.error_tip.password_check').show();
+			$('.error_tip.password_check').html("<i class='icon-ok'></i>");
+			$('.error_tip.password_check').css("color" , "green");
+			$('#password_check').removeClass('error');
+			return true;
+		}
+	}
+</script>
+
+</html>

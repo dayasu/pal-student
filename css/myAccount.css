@@ -1,0 +1,190 @@
+* {
+    font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+
+body {
+    minheight: 101%
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0
+}
+
+ol,
+li {
+    list-style: none
+}
+
+input,
+button,
+select,
+textarea {
+    outline: 0
+}
+
+a:link,
+a:hover {
+    text-decoration: none
+}
+
+a:visited,
+a:active {
+    text-decoration: none
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right;
+    display: inline
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table
+}
+
+.clearfix:after {
+    clear: both;
+    overflow: hidden
+}
+
+.clearfloat {
+    clear: both
+}
+
+button {
+    border: 0
+}
+
+html {
+    height: 100%
+}
+
+body {
+    height: 100%;
+    width: 100%
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px
+}
+
+.left_tab {
+    width: 220px;
+    background: #2fbb5c;
+    float: left
+}
+
+.right_detail {
+    width: 730px;
+    height: 500px;
+    margin-left: 25px;
+    float: left
+}
+
+.info_box {
+    width: 635px;
+    margin: 0 auto;
+    margin-top: 40px
+}
+
+.money_box,
+.score_box {
+    width: 300px;
+    height: 150px;
+    background-color: #ecf8f7
+}
+
+.money_box {
+    float: left;
+    position: relative;
+}
+
+.score_box {
+    float: right
+}
+
+.info_box .top_tag .tag_pic {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-left: 40px
+}
+
+.info_box .top_tag .tag_detail {
+    display: inline-block;
+    height: 50px;
+    width: 100px;
+    margin-top: 00px;
+    margin-left: 10px;
+    vertical-align: text-bottom;
+    font-size: 20px;
+    line-height: 40px
+}
+.tag_detail.a {
+    line-height: 40px;
+    padding-left: 105px;
+}
+.money_box .tag_pic {
+    background: url(../images/myMoney.png) no-repeat center center
+}
+
+.score_box .tag_pic {
+    background: url(../images/myScore.png) no-repeat center center
+}
+
+.bottom_num {
+    color: red;
+    font-size: 20px;
+    padding-left: 130px;
+    padding-top: 10px
+}
+
+.frozen_capital {
+    margin-top: 20px;
+    float: left;
+    width: 300px;
+    height: 150px;
+    background-color: #ecf8f7
+}
+.hehe,.lala {
+    position: absolute;
+    left: 28px;
+    bottom: 59px;
+}
+.lala {
+    bottom: 23px;
+}

@@ -1,0 +1,1 @@
+header,nav,article,section,aside,footer{display:block}.footer{padding-top:30px;padding-bottom:60px;border-top:10px solid #00b1cd}.footer a{color:#6a7f94}.footer a:hover{color:#000}.footer-main{width:970px;margin:0 auto}.footer-nav{text-align:center;font:14px/20px 'microsoft yahei'}.footer-nav a{margin:0 50px}.footer-copy{padding-top:25px;line-height:20px;text-align:center}

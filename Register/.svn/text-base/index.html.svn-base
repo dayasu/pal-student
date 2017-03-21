@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf8"/>
+	<link rel="shortcut icon" href="__PUBLIC__/images/logo.ico" type="image/x-icon" />
+	<title>用户注册</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/register.css"/>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.md5.js"></script>
+<!--[if lte IE 8]>
+<noscript>
+	<style>.html5-wrappers{display:none!important;}</style>
+	<div class="ie-noscript-warning">
+		您的浏览器禁用了脚本，请
+		<a href="">查看这里</a>
+		来启用脚本!或者
+		<a href="/?noscript=1">继续访问</a>
+		.
+	</div>
+</noscript>
+<![endif]-->
+<!--[if lt IE 9]>
+<script>
+		(function() {
+		if (!
+		/*@cc_on!@*/
+		0) return;
+		var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+		var i= e.length;
+		while (i--){
+		document.createElement(e[i])
+		}
+		})()
+		</script>
+<![endif]-->
+</head>
+<body>
+<div class="container">
+	<div class="logo_box">
+		<a href="<{:U('Index/index')}>"></a>
+	</div>
+	<div class="wrap">
+		<div class="register-box select">
+			<div class="pic_2"></div>
+			<a href="<{:U('userFirst')}>">
+				<div class="pic s"></div>
+				<div class="student">家长</div>
+			</a>
+			<a href="<{:U('teacherFirst')}>">
+				<div class="pic t"></div>
+				<div class="teacher">家教</div>
+			</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

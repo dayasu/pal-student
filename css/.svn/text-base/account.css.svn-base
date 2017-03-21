@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+    font-size: 18px
+}
+
+input {
+    color: black
+}
+
+input:focus,
+#account_getbtn:hover {
+    -webkit-box-shadow: #5EB6A3 0 0 10px;
+    -moz-box-shadow: #5EB6A3 0 0 10px;
+    box-shadow: #5EB6A3 0 0 10px
+}
+
+#account_getbtn {
+    width: 160px;
+    height: 30px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    margin: 40px auto;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #5EB6A3;
+    cursor: pointer
+}
+
+.applyaccount_main {
+    width: 630px;
+    height: 400px;
+    color: #5EB6A3;
+    margin: 20px auto;
+    display: none
+}
+
+.applyaccount_main span {
+    font-weight: bold;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px
+}
+
+.account_detail {
+    width: 630px;
+    height: 45px;
+    margin: 0 auto 15px;
+    border-top: 1px solid #5EB6A3;
+    border-bottom: 1px solid #5EB6A3
+}
+
+.account_dleft {
+    float: left;
+    width: 170px;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    border-right: 1px solid #5EB6A3
+}
+
+.account_dright {
+    float: right;
+    width: 459px;
+    height: 43px;
+    padding-left: 5px
+}
+
+.account_yes {
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #5EB6A3;
+    color: white;
+    margin: 0 auto;
+    text-align: center
+}
+
+#account_message2:hover,
+#account_message:hover,
+.account_yes:hover {
+    -webkit-box-shadow: #888 0 0 10px;
+    -moz-box-shadow: #888 0 0 10px;
+    box-shadow: #888 0 0 10px;
+    cursor: pointer
+}
+
+.account_input {
+    width: 220px;
+    height: 30px;
+    margin-top: 8px;
+    font-size: 15px;
+    padding-left: 5px;
+    border: 1px solid #5EB6A3;
+    float: left
+}
+
+#account_message,
+#account_message2 {
+    width: 110px;
+    float: left;
+    line-height: 30px;
+    background-color: #5EB6A3;
+    color: white;
+    text-align: center
+}
+
+.account_img {
+    float: left;
+    width: 32px;
+    height: 43px;
+    margin-left: 25px;
+    padding-top: 8px;
+    display: none
+}
+
+.account_alert {
+    float: left;
+    width: 170px;
+    height: 43px;
+    color: red;
+    line-height: 43px;
+    display: none;
+    font-weight: bold
+}

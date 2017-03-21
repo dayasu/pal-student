@@ -1,0 +1,138 @@
+.star {
+    display: block;
+    height: 100%;
+    width: auto;
+}
+.star span {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    top: 8px;
+}
+.star span {
+    background:url(../images/star_bg.png) no-repeat;
+    background-size: 300%;
+    background-position: right;
+}
+.to_appraise .star span {
+    cursor: pointer;
+}
+.star[appraise-data='0'] span {
+
+}
+.star span:nth-child(1) {
+    background: none;
+}
+.star[appraise-data='0.5'] span:nth-child(2) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+    background-position: 50%;
+}
+.star[appraise-data='1'] span:nth-child(2) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='1.5'] span:nth-child(2) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='1.5'] span:nth-child(3) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+    background-position: 50%;
+}
+.star[appraise-data='2'] span:nth-child(2) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='2'] span:nth-child(3) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='2.5'] span:nth-child(2) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='2.5'] span:nth-child(3) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='2.5'] span:nth-child(4) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+    background-position: 50%;
+}
+.star[appraise-data='3'] span:nth-child(2) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='3'] span:nth-child(3) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='3'] span:nth-child(4) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='3.5'] span:nth-child(2) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='3.5'] span:nth-child(3) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='3.5'] span:nth-child(4) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='3.5'] span:nth-child(5) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+    background-position: 50%;
+}
+.star[appraise-data='4'] span:nth-child(2) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='4'] span:nth-child(3) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='4'] span:nth-child(4) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='4'] span:nth-child(5) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='4.5'] span:nth-child(2) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='4.5'] span:nth-child(3) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='4.5'] span:nth-child(4) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='4.5'] span:nth-child(5) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='4.5'] span:nth-child(6) {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+    background-position: 50%;
+}
+.star[appraise-data='5'] span {
+    background: url('../images/star_bg.png') no-repeat;
+    background-size: 300%;
+}
+.star[appraise-data='5'] span:nth-child(1) {
+    background: none;
+}

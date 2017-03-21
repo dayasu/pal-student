@@ -1,0 +1,615 @@
+.teacher-info {
+	width: 100%;
+	height: 250px;
+	background-color: #f5f5f5;
+	min-width: 1000px
+}
+.teacher-head {
+	margin-left: 20px;
+	margin-right: 50px;
+	margin-top: 30px;
+	width: 160px;
+	height: 160px;
+	border-radius: 100px;
+	float: left;
+	position: relative
+}
+.teacher-head-img {
+	width: 160px;
+	height: 160px;
+	border-radius: 100px
+}
+.teacher-head span {
+	position: absolute;
+	top: 180px;
+	left: 5px;
+	width: 140px;
+	text-align: center;
+	margin-left: 14px;
+	color: #36a48c;
+	font-size: 18px
+}
+.container-float div {
+	float: left
+}
+.teacher-detail {
+	float: left;
+	margin-top: 20px;
+	position: relative
+}
+.show-words {
+	float: left;
+	margin-left: 16px;
+	margin-top: 80px
+}
+.underLine {
+	position: absolute;
+	bottom: 12px;
+	left: 40px
+}
+.underLine span:first-child {
+	font-size: 24px;
+	color: #36a48c
+}
+.underLine span:last-child {
+	font-size: 16px;
+	color: #a2b2a6;
+	margin-left: 5px
+}
+.show-words>div {
+	position: relative;
+	width: 120px;
+	height: 120px;
+	float: left;
+	margin-right: 15px
+}
+.show-word1 {
+	background: url(../images/showGoodsTeacherExperience.png) no-repeat
+}
+.show-word2 {
+	background: url(../images/showGoodsPublishClass.png) no-repeat
+}
+.show-word3 {
+	background: url(../images/showGoodsClassTime.png) no-repeat
+}
+.show-word4 {
+	background: url(../images/showGoodsStudentsNum.png) no-repeat
+}
+.a {
+	float: left;
+	height: 100px;
+	width: 100px
+}
+.male {
+	background: url(../images/Search_male_20.png)
+}
+.female {
+	background: url(../images/Search_female_20.png)
+}
+#sex-img {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background-size: 100% 100%;
+	top: 5px;
+	margin: 0;
+	vertical-align: middle
+}
+.detail-context span {
+	font-size: 27px;
+	color: #36a48c;
+	margin-bottom: 10px
+}
+.detail-context2 span {
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px
+}
+.hasSeen {
+	position: absolute;
+	right: 80px;
+	top: 20px
+}
+.hasSeen span:first-child {
+	font-size: 12px
+}
+.hasSeen span:nth-child(2) {
+	color: #f4333c;
+	font-size: 22px;
+	margin-left: 4px;
+	margin-right: 4px
+}
+.hasSeen span:last-child {
+	font-size: 12px
+}
+.container {
+	position: relative
+}
+.cards {
+	height: 120px;
+	width: 100%;
+	padding-top: 25px
+}
+.card {
+	height: 100%;
+	width: 33.33%;
+	float: left
+}
+.cards .card>div {
+	position: relative;
+	width: 100%;
+	height: 72px
+}
+.card-img {
+	height: 72px;
+	width: 72px;
+	margin-left: auto;
+	margin-right: auto
+}
+.card-img1 {
+	background: url(../images/showGoodsId.png) no-repeat
+}
+.card-img21 {
+	background: url(../images/showGoodsCerti.png) no-repeat
+}
+.card-img20 {
+	background: url(../images/showGoodsCertiFail.png) no-repeat
+}
+.card-img31 {
+	background: url(../images/showGoodidenti.png) no-repeat
+}
+.card-img30 {
+	background: url(../images/showGoodidentiFail.png) no-repeat
+}
+.card span {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	color: #a7a7a7
+}
+.classes {
+	border: solid 2px #36a48c;
+	margin-top: 40px
+}
+.classes2 {
+	border: solid 2px #f1f1f1
+}
+.other-class-img {
+	background: url(../images/showGoodOtherClass.png) no-repeat;
+	background-size: 100% 100%;
+	height: 27px;
+	width: 27px;
+	float: left;
+	margin-top: 5px
+}
+.self-introduce {
+	border: solid 2px #f1f1f1;
+	padding: 20px
+}
+.self-introduce-img {
+	background: url(../images/showGoodidSelfIntroduce.png) no-repeat;
+	background-size: 100% 100%;
+	height: 27px;
+	width: 27px;
+	float: left;
+	margin-top: 5px
+}
+.class-class-img {
+	background: url(../images/showGoodClass.png) no-repeat;
+	background-size: 100% 100%;
+	height: 27px;
+	width: 27px;
+	float: left;
+	margin-top: 5px
+}
+}
+.self-introduce p {
+font-size: 18px;
+text-indent: 2em
+}
+.self-introduc {
+border: solid 2px #f1f1f1
+}
+.classes2 .class:first-child .class-info {
+border: 0
+}
+.class-info {
+border-top: solid 2px #f1f1f1;
+position: relative
+}
+.h2 {
+padding-left: 40px;
+padding-top: 15px;
+padding-bottom: 15px
+}
+.h2 h2 {
+font-size: 27px;
+height: 40px;
+line-height: 40px;
+float: left;
+margin-left: 5px;
+font-weight: normal
+}
+.time {
+line-height: 30px;
+font-size: 22px;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-left: 40px;
+padding-right: 40px
+}
+.time span {
+font-size: 18px;
+display: inline-block
+}
+.time span:last-child {
+float: right
+}
+.line {
+margin-left: 30px;
+margin-right: 30px;
+border-bottom: solid 1px #97dbae
+}
+.class-info-box {
+display: inline-block;
+vertical-align: top;
+width: 400px
+}
+.class-info-border {
+padding: 20px;
+p
+}
+.class-img img {
+width: 100%;
+height: 100%
+}
+.class-info-box-first {
+display: block;
+height: 20px;
+line-height: 20px;
+font-size: 18px
+}
+.number-box {
+width: 103px;
+height: 22px;
+margin-top: 40px;
+border: solid 1px #36a48c
+}
+.number-box span {
+display: inline-block;
+vertical-align: top;
+height: 20px;
+line-height: 20px;
+width: 20px;
+text-align: center;
+background-color: #36a48c;
+color: white
+}
+.number-box span:nth-child(3) {
+float: right
+}
+.number-box span i {
+font-size: 12px;
+height: 20px;
+line-height: 20px;
+text-align: center;
+width: 20px;
+display: block
+}
+.number-box input {
+display: inline-block;
+vertical-align: top;
+width: 60px;
+height: 20px;
+border: 0;
+padding-left: 10px;
+padding-right: 10px;
+color: #36a48c;
+font-weight: bold;
+text-align: center
+}
+.class-info-box-first {
+color: #f4333c;
+font-size: 22px;
+margin-bottom: 20px;
+margin-top: 20px
+}
+.class-img span {
+position: absolute;
+bottom: -30px;
+display: block;
+width: 100%;
+text-align: center;
+font-size: 20px
+}
+.class-img {
+position: relative;
+margin-bottom: 40px;
+margin-left: 20px;
+margin-right: 40px;
+height: 140px;
+width: 140px;
+border-radius: 100px
+}
+.order {
+float: right;
+margin-right: 30px;
+position: relative
+}
+.order-button {
+width: 120px;
+height: 40px;
+line-height: 40px;
+text-align: center;
+background-color: #f4b22d;
+display: block;
+color: white;
+margin-top: 10px;
+cursor: pointer;
+float: right
+}
+.order-button-false {
+width: 120px;
+height: 40px;
+line-height: 40px;
+text-align: center;
+background-color: #B6B6B6;
+display: block;
+color: white;
+margin-top: 10px;
+cursor: pointer;
+float: right
+}
+.order-buttons {
+position: relative
+}
+.order-button-win {
+display: none;
+position: absolute;
+width: 120px;
+top: 5px;
+right: 140px;
+padding: 8px;
+color: white;
+text-align: center;
+background-color: #C2C2C2
+}
+#win-off-button {
+position: absolute;
+top: 5px;
+right: 5px;
+font-size: 20px
+}
+.order-button-win-triangle {
+position: absolute;
+top: 18px;
+left: 100%;
+width: 0;
+height: 0;
+border-top: solid 6px transparent;
+border-right: solid 5px transparent;
+border-bottom: solid 6px transparent;
+border-left: solid 16px #C2C2C2
+}
+.add-input {
+height: 20px;
+line-height: 20px
+}
+.order-button:hover {
+background-color: #CD490C
+}
+.order .price span {
+color: #f4333c;
+font-size: 30px;
+font-weight: bold
+}
+.price {
+margin-top: 80px;
+margin-left: 10px
+}
+.chat-img {
+position: absolute;
+width: 20px;
+height: 20px;
+background: url(../images/showGoodChat.png) no-repeat;
+background-size: 100% 100%;
+bottom: -38px;
+left: 7px
+}
+.lessonMathematics {
+background: url(../images/lessonMathematics.png) no-repeat
+}
+.lessonBiology {
+background: url(../images/lessonBiology.png) no-repeat
+}
+.lessonGeography {
+background: url(../images/lessonGeography.png) no-repeat
+}
+.lessonPhysical {
+background: url(../images/lessonGeography.png) no-repeat
+}
+.lessonEnglish {
+background: url(../images/lessonEnglish.png) no-repeat
+}
+.lessonChemistry {
+background: url(../images/lessonChemistry.png) no-repeat
+}
+.lesson {
+width: 100%;
+height: 100%;
+position: absolute;
+opacity: .3;
+filter: alpha(opacity=30);
+background-size: 400px;
+background-position: 650px -40px;
+z-index: -1
+}
+#cover {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 10;
+background-color: black;
+opacity: .6;
+filter: alpha(opacity=50)
+}
+#win {
+display: none;
+z-index: 100;
+width: 400px;
+height: 150px;
+background-color: #5eb6a3;
+position: fixed;
+margin-top: -75px;
+margin-left: -200px;
+line-height: 150px;
+text-align: center;
+top: 50%;
+left: 50%;
+border: solid 8px #36a48c
+}
+.button-plus, .button-minus {
+cursor: pointer
+}
+.button-minus:hover {
+background-color: #5eb6a3
+}
+.button-plus:hover {
+background-color: #5eb6a3
+}
+.win-info {
+font-size: 18px;
+border-top: solid 1px #f5f5f5;
+border-bottom: solid 1px #f5f5f5;
+height: 50px;
+line-height: 50px;
+padding-left: 25px;
+padding-right: 60px;
+font-weight: bold
+}
+#win-single-price, #win-class, #win-total-price, #win-class-num {
+float: right;
+color: #d9d9d9;
+font-weight: bold;
+margin-left: 5px;
+margin-right: 5px
+}
+.win-float {
+float: right;
+color: #d9d9d9;
+font-weight: bold
+}
+#win-class {
+color: color:#d9d9d9;
+font-weight: bold
+}
+#win-single-price, #win-total-price {
+color: #f25d62;
+font-weight: bold;
+margin-left: 5px;
+margin-right: 5px
+}
+.win-order-button {
+border: solid 2px #36a48c;
+width: 180px;
+height: 50px;
+border-radius: 3px;
+margin-left: auto;
+margin-right: auto;
+line-height: 50px;
+font-size: 22px;
+text-align: center;
+color: #36a48c
+}
+#win-loca {
+display: inline-block;
+width: 400px;
+text-align: center;
+color: #d9d9d9;
+font-weight: bold
+}
+#win-order-scroll {
+color: #36a48c
+}
+.order-button a {
+display: inline-block;
+width: 100%;
+color: white
+}
+.win-notice {
+color: white;
+font-size: 27px
+}
+#limitedNum {
+color: #f4b22d;
+font-size: 27px
+}
+.chat_notice {
+display: none;
+position: absolute;
+background-color: #c4c4c4;
+border-radius: 6px;
+padding: 5px;
+bottom: -90px;
+z-index: 1000;
+left: 15px;
+text-align: center;
+font-size: 12px;
+width: 155px
+}
+
+.parofewm {
+  position: relative;
+}
+.parofewm:hover .chat_ewm,.parofewm:hover #white {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.parofewm #white{
+  display: block;
+  width: 140px;
+  height: 210px;
+  left: -25px;
+  top: 24px;
+  z-index: 500;
+  background: #fff;
+}
+
+.parofewm .chat_ewm {
+  background: url(../images/jiazhang.png) no-repeat;
+  display: block;
+  width: 140px;
+  height: 140px;
+  left: -25px;
+  top: 94px;
+  z-index: 1000;
+}
+
+.parofewm .chat_ewm,.parofewm #white {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transform: scale(0.01, 0.01);
+  -ms-transform: scale(0.01, 0.01);
+  -webkit-transform: scale(0.01, 0.01);
+  transform: scale(0.01, 0.01);
+  -moz-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+}

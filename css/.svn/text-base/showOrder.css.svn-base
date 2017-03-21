@@ -1,0 +1,957 @@
+* {
+    font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+
+body {
+    minheight: 101%
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0
+}
+
+ol,
+li {
+    list-style: none
+}
+
+input,
+button,
+select,
+textarea {
+    outline: 0
+}
+
+a:link,
+a:hover {
+    text-decoration: none
+}
+
+a:visited,
+a:active {
+    text-decoration: none
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right;
+    display: inline
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table
+}
+
+.clearfix:after {
+    clear: both;
+    overflow: hidden
+}
+
+.clearfloat {
+    clear: both
+}
+
+button {
+    border: 0
+}
+
+html {
+    height: 100%
+}
+
+body {
+    height: 100%;
+    width: 100%
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px
+}
+
+.left_tab {
+    width: 220px;
+    height: 650px;
+    background: #36a48c;
+    float: left
+}
+
+.right_detail {
+    width: 730px;
+    margin-left: 25px;
+    float: left
+}
+
+.right_detail .tab_order {
+    width: 100%;
+    height: 54px;
+    background: #fff
+}
+
+.right_detail .tab_order ul li {
+    float: left;
+    width: 182px;
+    height: 54px;
+    text-align: center;
+    border-bottom: 2px solid #f1f1f1
+}
+
+.right_detail .tab_order ul li:last-child a {
+    border-right: 0
+}
+
+.right_detail .tab_order ul li a {
+    font-size: 20px;
+    letter-spacing: 2px;
+    width: 100%;
+    display: block;
+    border-right: 1px solid #f1f1f1;
+    margin-top: 12px;
+    color: #000
+}
+
+.right_detail .tab_order ul li:hover {
+    border-bottom: 2px solid #36a48c
+}
+
+.right_detail .tab_order ul li .num_order {
+    color: #36a48c
+}
+
+.right_detail .tab_order ul li.active {
+    border-bottom: 2px solid #36a48c
+}
+
+.right_detail .tab_order ul li.active a {
+    color: #36a48c
+}
+
+.right_detail .tab_tag {
+    width: 100%;
+    background: #f1f1f1;
+    height: 52px;
+    margin-top: 20px
+}
+
+.right_detail .tab_tag ul li {
+    float: left;
+    color: #000;
+    display: block;
+    text-align: center;
+    height: 100%;
+    line-height: 54px;
+    font-size: 16px
+}
+
+.tab_1 {
+    width: 130px
+}
+
+.tab_2,
+.tab_3,
+.tab_4 {
+    width: 100px
+}
+
+.tab_5,
+.tab_6 {
+    width: 150px
+}
+
+.right_detail .tab_tag ul li:nth-child(1) {
+    width: 130px
+}
+
+.right_detail .tab_tag ul li:nth-child(2),
+.right_detail .tab_tag ul li:nth-child(3),
+.right_detail .tab_tag ul li:nth-child(4) {
+    width: 100px
+}
+
+.right_detail .tab_tag ul li:nth-child(5),
+.right_detail .tab_tag ul li:nth-child(6) {
+    width: 150px
+}
+
+.right_detail .content {
+    width: 100%;
+    position: relative;
+    min-height: 315px
+}
+
+.right_detail .content .order_detail {
+    width: 100%;
+    height: 160px;
+    margin-top: 10px;
+    border: 1px solid #f1f1f1
+}
+
+.right_detail .content .order_detail:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5)
+}
+
+.right_detail .content .order_detail .order_detail_top {
+    width: 100%;
+    height: 45px;
+    background: #f1f1f1;
+    position: relative
+}
+
+.right_detail .content .order_detail .order_detail_top span {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    display: block;
+    float: left;
+    width: 150px
+}
+
+.right_detail .content .order_detail .order_detail_top span:last-child {
+    position: absolute;
+    text-align: center;
+    right: 0
+}
+
+.icon-ban-circle {
+    color: #ff6161;
+    font-size: 18px;
+    margin-right: 5px
+}
+
+.stop {
+    position: absolute;
+    right: -100px;
+    width: 50px;
+    cursor: pointer
+}
+
+.delete {
+    position: absolute;
+    right: -100px;
+    width: 50px;
+    cursor: pointer
+}
+
+.delete:hover {
+    color: #ff6161
+}
+
+.right_detail .content .order_detail .order_detail_top .chat {
+    position: relative;
+    color: #36a48c;
+    cursor: pointer
+}
+
+.right_detail .content .order_detail .order_detail_top .chat:hover {
+    color: #268C76
+}
+
+.right_detail .content .order_detail .order_detail_top .chat img {
+    float: left;
+    margin-top: 8px;
+    position: relative;
+    left: 20px
+}
+
+.right_detail .content .order_detail .order_detail_top .delete span {
+    height: 40px;
+    width: 40px;
+    background: url(../images/order_delete.png) no-repeat 100% center;
+    display: inline-block;
+    cursor: pointer;
+    opacity: .2
+}
+
+.right_detail .content .order_detail .order_detail_top .delete span:hover {
+    opacity: .5
+}
+
+.right_detail .content .order_detail .order_detail_top .date {
+    letter-spacing: 0；
+    width: 120px;
+}
+
+.right_detail .content .order_detail .order_detail_cont {
+    height: 110px;
+    width: 100%
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li {
+    display: block;
+    float: left;
+    height: 100%;
+    text-align: center;
+    height: 110px;
+    padding-top: 40px
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li:nth-child(1) {
+    width: 126px;
+    border-right: 2px solid #f1f1f1
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li:nth-child(4) {
+    border-right: 2px solid #f1f1f1
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li:nth-child(2),
+.right_detail .content .order_detail .order_detail_cont ul li:nth-child(3),
+.right_detail .content .order_detail .order_detail_cont ul li:nth-child(4) {
+    width: 100px
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li:nth-child(5) {
+    border-right: 2px solid #f1f1f1
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li:nth-child(5),
+.right_detail .content .order_detail .order_detail_cont ul li:nth-child(6) {
+    width: 150px
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li.do {
+    padding-top: 0
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li.do div {
+    width: 120px;
+    margin: 0 auto;
+    height: 30px;
+    margin-top: 5px;
+    line-height: 30px;
+    cursor: pointer
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li.do div.add_class_log,
+.right_detail .content .order_detail .order_detail_cont ul li.do div.confirm_order {
+    background: #f5b22d;
+    color: #fff
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li.do div.add_class_log a,
+.right_detail .content .order_detail .order_detail_cont ul li.do div.confirm_order a {
+    color: #fff
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li.do div.add_class_log:hover,
+.right_detail .content .order_detail .order_detail_cont ul li.do div.confirm_order:hover {
+    background: #e3a01a
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li.do div.remind_class,
+.right_detail .content .order_detail .order_detail_cont ul li.do div.give_up,
+.right_detail .content .order_detail .order_detail_cont ul li.do div.see_log {
+    border: 1px solid #f1f1f1;
+    color: #36a48c
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li.do div.remind_class:hover,
+.right_detail .content .order_detail .order_detail_cont ul li.do div.give_up:hover,
+.right_detail .content .order_detail .order_detail_cont ul li.do div.see_log:hover {
+    color: #fff;
+    background: #36a48c
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li.do div.give_up,
+.right_detail .content .order_detail .order_detail_cont ul li.do div.see_log {
+    margin-top: 10px
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li.do div.see_log {
+    margin-top: 8px
+}
+
+.see_log a {
+    color: #36a48c
+}
+
+.see_log:hover a {
+    color: #fff
+}
+.appraise {
+    border: 1px solid #f1f1f1;
+    color: #FB9292;
+    margin-top: 8px
+}
+.appraise:hover {
+    background: #FB9292;
+    color: #fff;
+}
+.had_appraise {
+    margin-top: 8px;
+    border: 1px solid #f1f1f1;
+    color: #ccc;
+}
+
+
+.right_detail .content .order_detail .order_detail_cont ul li.do .show_detail a {
+    color: #000
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li.do .show_detail a:hover {
+    color: #777
+}
+
+.no_pay {
+    color: #f5b22d
+}
+
+.right_detail .content .order_detail .order_detail_cont ul li.do .have_cancel {
+    margin-top: 34px
+}
+
+.page {
+    width: auto;
+    display: inline-block;
+    margin-top: 20px
+}
+
+.md-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    max-width: 620px;
+    min-width: 300px;
+    min-height: 300px;
+    height: auto;
+    z-index: 2000;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%)
+}
+
+.md-show {
+    visibility: visible
+}
+
+.md-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    background: rgba(143, 27, 15, 0.8);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s
+}
+
+.md-show ~ .md-overlay {
+    opacity: 1;
+    visibility: visible
+}
+
+.md-content {
+    height: 300px;
+    color: #fff;
+    background-color: #c1ebce;
+    position: relative;
+    margin: 0 auto
+}
+
+.md-content h3 {
+    margin: 0;
+    padding: .4em;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+    opacity: .8;
+    background: rgba(0, 0, 0, 0.1);
+    position: relative
+}
+
+.cancel_x {
+    position: absolute;
+    right: 5px;
+    top: -10px;
+    cursor: pointer
+}
+
+.md-content button {
+    display: block;
+    margin: 0 auto;
+    font-size: .8em
+}
+
+.md-effect-1 .md-content {
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s
+}
+
+.md-show.md-effect-1 .md-content {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+}
+
+.zhezhao {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-color: #000;
+    width: 100%;
+    z-index: 99;
+    opacity: .5;
+    display: none;
+    filter: alpha(opacity=50);
+    -moz-opacity: .5
+}
+
+.add-log-modal {
+    height: 400px
+}
+
+.add-log-modal .md-content {
+    background-color: #bfbfbf;
+    height: 398px;
+    border-radius: 2px;
+    border: 1px solid #484747
+}
+
+.add-log-modal .md-content div {
+    background-color: #efefef
+}
+
+.add-log-modal .md-content h3 {
+    display: block;
+    height: 72px;
+    padding: 0;
+    text-align: center;
+    background-color: #484747;
+    color: #fff;
+    line-height: 72px
+}
+
+.add-log-modal .md-content div textarea {
+    width: 100%;
+    height: 250px;
+    font-size: 20px;
+    border: 0;
+    padding: 10px
+}
+
+.add-log-modal .md-content .confirm_add {
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    float: right;
+    margin-right: 42px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #36a48c
+}
+
+.add-log-modal .md-content .confirm_add:hover {
+    background-color: #1AA747
+}
+
+.add-log-modal {
+    border-radius: 5px
+}
+
+.delete-modal {
+    width: 620px
+}
+
+.delete-modal h3 {
+    display: block;
+    height: 72px;
+    padding: 0;
+    text-align: center;
+    background-color: #484747;
+    color: #fff;
+    line-height: 72px
+}
+
+.delete-modal .md-content {
+    background-color: #efefef;
+    border: 1px solid #484747
+}
+
+.delete-modal .md-content div {
+    height: 230px;
+    background: url(../images/showOrder_tc_bg.png);
+    position: relative
+}
+
+.delete-modal .md-content div span {
+    display: inline-block;
+    position: absolute;
+    right: 38px;
+    bottom: 98px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer
+}
+
+.delete-modal .md-content div span.confirm_stop {
+    background-color: #f5b22d
+}
+
+.delete-modal .md-content div span.confirm_stop:hover {
+    background-color: #E29C0F
+}
+
+.delete-modal .md-content div span.confirm_delete {
+    background-color: #f5b22d
+}
+
+.delete-modal .md-content div span.confirm_delete:hover {
+    background-color: #E29C0F
+}
+
+.delete-modal .md-content div span.cancel_delete {
+    bottom: 36px;
+    background-color: #30b75b
+}
+
+.delete-modal .md-content div span.cancel_delete:hover {
+    background-color: #00BC3C
+}
+
+.word {
+    display: inline-block;
+    position: absolute;
+    padding-left: 5px
+}
+
+.to_pay {
+    background: #f5b22d;
+    color: #fff
+}
+
+.to_pay a {
+    color: #fff
+}
+
+.to_pay:hover {
+    background: #e3a01a
+}
+
+.comfirm_class {
+    background: #f5b22d;
+    color: #fff
+}
+
+.comfirm_class:hover {
+    background: #e3a01a
+}
+
+.remind_add_log {
+    border: 1px solid #f1f1f1;
+    color: #36a48c
+}
+
+.remind_add_log:hover {
+    color: #fff;
+    background: #36a48c
+}
+
+.remind-add-log-modal .md-content {
+    background-color: #fff
+}
+
+.remind-add-log-modal .md-content h3 {
+    background-color: #9B9B9B
+}
+
+.remind-add-log-modal div {
+    position: relative
+}
+
+.remind-add-log-modal .addBox {
+    text-align: center
+}
+
+.remind-add-log-modal .addBox .classNum {
+    height: 35px;
+    width: 100px;
+    background-color: #fff;
+    border: 1px solid #36a48c;
+    text-align: center;
+    line-height: 35px;
+    font-style: 18px
+}
+
+.addBox {
+    margin-top: 30px
+}
+
+.addBox .add,
+.addBox .down {
+    background-color: #36a48c;
+    color: #fff;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+    position: relative
+}
+
+.addBox .add:hover,
+.addBox .down:hover {
+    color: #2D947E
+}
+
+.confirmBtn,
+.cancelBtn {
+    display: inline-block;
+    background-color: #000;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px
+}
+
+.tip {
+    color: #000;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.confirmBtn {
+    right: 175px;
+    background-color: #36a48c;
+    border: 2px solid #36a48c
+}
+
+.confirmBtn:hover {
+    background-color: #0F7E65
+}
+
+.cancelBtn {
+    right: 320px;
+    border: 2px solid #C5C5C5;
+    background-color: #fff;
+    color: #C5C5C5
+}
+
+.box {
+    height: 200px
+}
+
+.to_refund {
+    border: 1px solid #f1f1f1;
+    color: #36a48c;
+    margin-top: 10px
+}
+
+.to_refund:hover {
+    color: #fff;
+    background: #36a48c
+}
+
+.refund-modal {
+    width: 620px
+}
+
+.refund-modal h3 {
+    display: block;
+    height: 72px;
+    padding: 0;
+    text-align: center;
+    background-color: #484747;
+    color: #fff;
+    line-height: 72px
+}
+
+.refund-modal .md-content {
+    background-color: #efefef;
+    border: 1px solid #484747
+}
+
+.refund-modal .md-content div {
+    height: 230px;
+    background: url(../images/showOrder_tc_bg.png);
+    position: relative
+}
+
+.refund-modal .md-content div span {
+    display: inline-block;
+    position: absolute;
+    right: 38px;
+    bottom: 98px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer
+}
+
+.refund-modal .md-content div span.confirm_delete {
+    background-color: #f5b22d
+}
+
+.refund-modal .md-content div span.confirm_delete:hover {
+    background-color: #E29C0F
+}
+
+.refund-modal .md-content div span.cancel_delete {
+    bottom: 36px;
+    background-color: #30b75b
+}
+
+.refund-modal .md-content div span.cancel_delete:hover {
+    background-color: #00BC3C
+}
+
+.no_order {
+    font-size: 17px;
+    padding: 50px
+}
+
+
+
+/*评价弹窗*/
+.appraise-modal .md-content {
+    background: #fff;
+    position: relative;
+    height: 380px;
+}
+.appraise-modal .md-content .box {
+    height: 285px;
+}
+.appraise-modal .md-content h3 {
+    background: rgba(11, 128, 50, 0.68);
+}
+.appraise-modal .md-content .cancel_appraise,
+.appraise-modal .md-content .confirm_appraise {
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    padding: 7px 23px;
+    cursor: pointer;
+}
+.appraise-modal .md-content .cancel_appraise {
+    background: #ccc;
+    right: 150px;
+}
+.appraise-modal .md-content .confirm_appraise {
+    background: #30b75b;
+    right: 40px;
+}
+.appraise-modal .md-content .confirm_appraise:hover {
+    background: #58E084;
+}
+.appraise_group {
+    padding: 20px;
+    padding-top: 5px;
+}
+.appraise_group .appraise_item {
+    width: 100%;
+    height: 54px;
+}
+.appraise_group .appraise_item .label {
+    position: relative;
+    right: -20px;
+    display: inline-block;
+    width: 150px;
+    height: 54px;
+    line-height: 54px;
+    text-align: right;
+    vertical-align: text-top;
+    color: #000;
+}
+.appraise_group .appraise_item .appraise_star_box {
+    display: inline-block;
+    width: 205px;
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+    vertical-align: text-top;
+}
+.appraise_group .appraise_item .appraise_desc {
+    padding-left: 20px;
+    line-height: 54px;
+    vertical-align: text-top;
+    color: #000;
+}
+.account
+{
+	width:100%;	
+	height:100px;
+	font-size:25px;
+	text-align:center;
+	line-height:80px;
+	cursor:pointer;
+}
+.account-cancel
+{
+	width:100%;
+	height:100px;
+	font-size:25px;
+	float:left;
+	text-align:center;
+	line-height:100px;
+	bottom: 36px;
+    background-color: #30b75b;
+	cursor:pointer;
+}
+.account:hover{background:#000000;} 
+
+

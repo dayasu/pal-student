@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="baidu_union_verify" content="d25a26eeac71f6c6ac71773913ceecba">
+    <title>爱淘学--让教育成为艺术</title>
+    <link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/all.css" />
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/all.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        var index_url = "<{:U('changeCity')}>"
+    </script>
+    <!-- 百度统计代码 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?b9ad48bc9dd5ab5a8ca814664c095a24";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+    <if condition="session('role_type')==C('USER')">
+        <div class="index_person">
+            <div id='index_person_center'>
+                <a class="nav-a" href="<{:U('UserInfo/index')}>"><i class="icon-user"></i>个人中心</a>
+                <a class="nav-a" href="<{:U('Goods/showOrdering')}>"><i class="icon-list-alt"></i>我的订单</a>
+                <a class="nav-a" href="<{:U('Records/showRecords')}>"><i class="icon-calendar"></i>我的日志</a>
+                <a class="nav-a head_my_msg" href="<{:U('NoticeCenter/userIndex')}>">
+                    <i class="icon-envelope-alt"></i>我的消息
+                    <if condition="session('messages') neq 0">
+                        <div class="head_msg">
+                            <div class="head_msg__triangle"></div>
+                            <span id="head_msg_num"><{$Think.session.messages}></span>
+                        </div>
+                    </if>
+                </a>
+                <div id="index_hub2">
+                    <a href="<{:U('Login/logout')}>">退出</a>
+                    <a id="person" href="<{:U('UserInfo/index')}>">家长: <{$Think.session.user_phone}></a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <elseif condition="session('role_type')==C('PROD')" />
+        <div class="index_person">
+            <div id='index_person_center'>
+                <a class="nav-a" href="<{:U('ProdInfo/index')}>"><i class="icon-user"></i>个人中心</a>
+                <a class="nav-a" href="<{:U('GoodsConfig/showOrdering')}>"><i class="icon-list-alt"></i>我的订单</a>
+                <a class="nav-a" href="<{:U('Records/showRecords')}>"><i class="icon-calendar"></i>我的日志</a>
+                <a class="nav-a head_my_msg" href="<{:U('NoticeCenter/prodIndex')}>">
+                    <i class="icon-envelope-alt"></i>我的消息
+                    <if condition="session('messages') neq 0">
+                        <div class="head_msg">
+                            <div class="head_msg__triangle"></div>
+                            <span id="head_msg_num"><{$Think.session.messages}></span>
+                        </div>
+                    </if>
+                </a>
+                <div id="index_hub2">
+                    <a href="<{:U('Login/logout')}>">退出</a>
+                    <a id="person" href="<{:U('ProdInfo/index')}>">家教: <{$Think.session.prod_phone}></a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <else/>
+        <div class="index_nav">
+            <div class="index_nav_button display">
+                <span class="index_nav_button_register"><a href="<{:U('Register/index')}>">注册</a></span>
+                <span class="index_nav_button_login"><a href="<{:U('Login/index')}>?returnUrl=__SELF__">登录</a></span>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </if>
+    <div class="index_nav">
+        <div class="index_nav_search">
+            <div class="index_nav_search_logo"></div>
+            <div class="index_nav_search_city">
+                <span class="index_nav_search_city_word" id="<{$city.city_id}>"><{$city.city_name}></span>
+                <span class="index_nav_search_city_change">切换城市</span>
+                <div id="index_change_city" class="index_city">
+                    <div class="change_triangle"></div>
+                    <ul>
+                        <volist name="ucity" id='v'>
+                            <li id="<{$v.city_id}>">
+                                <{$v.city_name}>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+            <form class="index_nav_search_form" action="<{:U('Search/search')}>" naeme="search" method="get">
+                <input class="index_nav_search_form_word" type="text" name="generalsearch" placeholder="如： 高中数学"><input class="index_nav_search_form_search" type="submit" value="搜索">
+            </form>
+            <div class="index_key_words"></div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+    <div class="index_nav_tab">
+        <ul class="index_nav_tab_ul">
+            <li class="index_nav_tab_first"><a href="<{:U('Index/index')}>">首页</a></li>
+            <li><a href="<{:U('Search/index')}>">家长入口</a></li>
+            <li><a href="<{:U('About/PlatformDescription')}>">平台说明</a></li>
+            <li><a href="<{:U('App/app')}>">APP下载</a></li>
+            <li><a href="<{:U('Index/questionfeedback')}>">问题反馈</a></li>
+        </ul>
+        <div class="container">
+            <div class="index_find_class">
+                <h2>找课程</h2>
+                <div class="index_find_class_hub">
+                    <ul>
+                        <foreach name='cate' item='i' key='key'>
+                            <li id="l<{$key}>">
+                                <div>
+                                    <div id="img<{$key}>" class="index_find_class_img"></div><span><{$i.good_cate_name}></span>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                        </foreach>
+                    </ul>
+                    <div class="triangle_left"></div>
+                    <div class="triangle_right"></div>
+                </div>
+                <div class="index_find_class_child">
+                </div>
+                <foreach name='cate' item='i' key='key'>
+                    <ul id="class_l<{$key}>" class="class_display">
+                        <php>
+                            $kind=$i['good_kinds'];</php>
+                        <foreach name="kind" item='k' key='ke'>
+                            <php>$ske['kid']=$ke</php>
+                            <li>
+                                <a href="<{:U('Search/index',$ske)}>">
+                                    <{$k}>
+                                </a>
+                            </li>
+                        </foreach>
+                    </ul>
+                </foreach>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="index_show">
+        <div id="index_show_button_left"><i class="icon-arrow-left"></i></div>
+        <div id="index_show_button_right"><i class="icon-arrow-right"></i></div>
+        <div id="index_show_img1"></div>
+        <div id="index_show_img2"></div>
+        <div id="index_show_img3"></div>
+        <div id="index_show_img4"></div>
+    </div>
+    <!---
+<div class="index_counter">
+	<div class="index_counter_img">
+		<span class='index_counter_child counter1'><{$statistics.user_total}></span>
+		<span class='index_counter_child counter2'><{$statistics.prod_total}></span>
+		<span class='index_counter_child counter3'><{$statistics.course_total}></span>
+	</div>
+</div>
+-->
+    <!--
+<div class="index_talent_teachers">
+	<div class="index_container">
+	<volist name="producers" id="i">
+	<php>
+		$good_url['pid'] = $i['prod_id'];
+	</php>
+	<a href="<{:U('Index/showGoodsByProd',$good_url)}>">
+		<div class="index_talent_teacher<{$i.number}>">
+			<div class="talent_head">
+				<img src="__ROOT__/Uploads/head_thumb/User/<{$i.prod_head_thumb}>">
+				<span class="talent_name t_name<{$i.number}>"><{$i.prod_name}></span>
+			</div>
+			<div class="talent_info t_info<{$i.number}>">
+				<span>最擅长：<{$i.prod_goodat_name}></span>
+				<span>经验：<{$i.prod_experience}>个月</span>
+			    <span>来自：<{$i.prod_company}></span>
+			</div>
+			<div class="talent_detail t_detail<{$i.number}>"><a href="<{:U('Index/showGoodsByProd',$good_url)}>">点击了解详情哦</a></div>
+		</div>
+	</a>
+	</volist>
+	</div>
+-->
+
+    </div>
+
+    <div class="index_special"></div>
+    <div class="index_bg1">
+        <div class="index_container">
+            <!-- 		<div class="index_bg1_img1"></div>
+		<div class="index_bg1_img2"></div>
+		<div class="index_bg1_img3"></div>
+		<div class="index_bg1_case1 index_bg1_case">
+			  <p class="indent">
+			  	“是爱淘学的老师让我的孩子学习进步！感谢爱淘学。”
+			  </p>
+			  <p class="index_float">--家长程女士</p>
+		</div>
+		<div class="index_bg1_case2 index_bg1_case">
+			<p class="indent">"爱淘学让找家教变得容易，不再为孩子找家教担心"</p>
+			<p class="index_float">--家长王先生</p>
+		</div>
+		<div class="index_bg1_case3 index_bg1_case">
+			<p class="indent">"在爱淘学我找到家教兼职，安全有保障，感谢爱淘学。"</p>
+			<p class="index_float">--吕同学</p>
+		</div> -->
+        </div>
+    </div>
+    <div class="index_server_flow"></div>
+
+    <include file="Public:footer" />
+    <!-- 修改城市透明遮罩 -->
+    <div id="index_err_cover"></div>
+</body>
+
+</html>

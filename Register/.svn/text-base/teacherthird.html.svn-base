@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf8"/>
+	<link rel="shortcut icon" href="__PUBLIC__/images/logo.ico" type="image/x-icon" />
+	<title>家教注册</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/register.css"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css"/>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.md5.js"></script>
+<!--[if lte IE 8]>
+<noscript>
+	<style>.html5-wrappers{display:none!important;}</style>
+	<div class="ie-noscript-warning">
+		您的浏览器禁用了脚本，请
+		<a href="">查看这里</a>
+		来启用脚本!或者
+		<a href="/?noscript=1">继续访问</a>
+		.
+	</div>
+</noscript>
+<![endif]-->
+<!--[if lt IE 9]>
+<script>
+		(function() {
+		if (!
+		/*@cc_on!@*/
+		0) return;
+		var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+		var i= e.length;
+		while (i--){
+		document.createElement(e[i])
+		}
+		})()
+		</script>
+<![endif]-->
+<script>
+var registerurl = "<{:U('ambassadorCheck')}>";
+var registerurl1 = "<{:U('prodRegister3')}>";
+</script>
+</head>
+<body>
+<div class="container">
+	<div class="logo_box">
+		<a href="<{:U('Index/index')}>"></a>
+	</div>
+	<div class="wrap">
+		<div class="register-box first third">
+			<div class="pic_2"></div>
+			<div class="content">
+				<div class="input-group"><span class="xyds"></span></div>
+				<div class="input-group">
+					<input placeholder="校园大使手机号" type="text" name="ambassador" id="ambassador" />
+					<span class="error_tip phone ambassador"></span>
+				</div>
+				<div class="input-group">
+					<input placeholder="验证码" type="text" name="ambassador_check_num " id="ambassador_check_num" class="yzm" />
+					<button id="get_check_num" class="get_yzm active">获取验证码</button>
+					<span class="error_tip yzm"></span>
+				</div>
+				<div class="input-group">
+					<input type="button" value="下一步" id="submit" />
+					<input type="button" value="跳过" id="jump" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function() {
+		var role_type = 1;
+		var ambassador;
+		var ambassador_check_num;
+		var error = '<i class="icon-remove-sign"></i>';
+		var right = '<i class="icon-ok"></i>';
+		// 检测手机号码是否格式正确
+		$("#ambassador").blur(function() {
+			var str = $("#ambassador").val();
+			var re = /^1[8345]\d{9}$/;
+			if (!re.test(str)) {
+				// 错误
+				error_tip("请输入手机号码");
+				return false;
+			} else {
+				// 正确
+				$('.error_tip.phone').show();
+				$('.error_tip.phone').html(right);
+				$('.error_tip.phone').css("color" , "green");
+			    $('#ambassador').removeClass('error');
+				return true;
+			}
+		});
+		// 获取验证码
+		$('#get_check_num').click(function(event){
+			event.preventDefault();
+			var clock=120;
+			var countdown;
+			$.post(
+				registerurl,
+				{ambassador_phone:$("#ambassador").val()},
+			  	function(data){
+				//alert(data.status);
+				if(data.status==1) {
+					error_tip("信息输入不完整");
+					$('#get_check_num').html('获取验证码');
+				} else if(data.status==2) {
+					error_tip("手机号输入不正确");
+					$('#get_check_num').html('获取验证码');
+				} else if(data.status==3) {
+					error_tip("大使不存在");
+					$('#get_check_num').html('获取验证码');
+				} else if(data.status==8) {
+					error_tip("两次发送不能超过120s");
+					$('#get_check_num').html('获取验证码');
+				} else if(data.status==0) {
+					countdown = setInterval(countDown,1000);
+					$('#get_check_num').attr("disabled" , "true");
+					$('#get_check_num').removeClass('active');
+				}
+			  },
+			  'json');
+			// 等待
+			var str = $("#ambassador").val();
+			var re = /^1[8345]\d{9}$/;
+			if (!re.test(str)) {
+				// 错误
+			} else {
+				// 正确
+				$('#get_check_num').html('<i class="icon-spinner icon-spin"></i>');
+			}
+			function countDown(){
+				$('#get_check_num').text(clock+"s后重发");
+				if(clock==0){
+					clearInterval(countdown);
+					$('#get_check_num').text('获取验证码');
+					$('#get_check_num').attr("disabled" , "false");
+					$('#get_check_num').addClass('active');
+				}
+				clock--;
+			}
+		});
+		// 检测验证码是否输入
+		$("#ambassador_check_num").blur(function() {
+			var str = $("#ambassador_check_num").val();
+			if (str == '') {
+				// 错误
+				$('.error_tip.yzm').show();
+				$('.error_tip.yzm').css("color" , "red");
+				$('.error_tip.yzm').html(error +"请输入验证码");
+				$('#ambassador_check_num').addClass('error');
+				return false;
+			} else {
+				// 正确
+				$('.error_tip.yzm').show();
+				$('.error_tip.yzm').html('');
+				$('.error_tip.yzm').css("color" , "green");
+			    $('#ambassador_check_num').removeClass('error');
+				return true;
+			}
+		});
+		// 提交注册
+		$("#submit").click(function() {
+			if($("#ambassador").val() == '') {
+				error_tip('请输入手机号码');
+				return false;
+			};
+			if( $("#ambassador_check_num").val() == '' ) {
+				$('.error_tip.yzm').show();
+				$('.error_tip.yzm').html(error +"请输入验证码");
+				$('#ambassador_check_num').addClass('error');
+				return false;
+			}
+			$.post(
+				registerurl1 ,
+				{
+				  ambassador_phone: $("#ambassador").val() ,
+				  ambassador_phone_check: $("#ambassador_check_num").val()
+				},
+				function(data) {
+					if(data.status == 0) {
+						window.location.href = "<{:U('ProdInfo/teacherFourth')}>";
+					} else if(data.status == 1) {
+						error_tip("信息输入不完整");
+					}else if(data.status == 2) {
+						error_tip("手机号输入不正确");
+					}else if(data.status == 3) {
+						error_tip("手机验证码错误");
+					}else if(data.status == 4) {
+						error_tip("大使不存在");
+					}
+				},'json'
+			);
+
+		});
+		// 跳过
+		$("#jump").click(function() {
+			window.location.href = "<{:U('ProdInfo/teacherFourth')}>";
+		});
+		function error_tip(tip) {
+			$('.error_tip.phone').show();
+			$('.error_tip.phone').html(error +tip);
+			$('.error_tip.phone').css("color" , "red");
+			$('#ambassador').addClass('error');
+		}
+		//按enter确定
+		$(document).keypress(function(e) {
+			if (e.which == 13) {
+				$("#submit").click();
+			}
+		});
+	});
+</script>
+</body>
+</html>
